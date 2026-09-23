@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Meta tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page title -->
+  <title>Inline and Internal CSS Task</title>
+
+  <!-- ===== TODO 2: Add an internal stylesheet ===== -->
+  <!-- Task: Add a <style> block right here (inside the <head>) with these 3 rules:
+
+       1. Element selector - every h2 on the page:
+            h2  ->  color: green;   font-size: 24px;
+
+       2. Class selector - every tag with class="intro":
+            .intro  ->  background-color: lightyellow;   padding: 10px;
+
+       3. ID selector - the one tag with id="special":
+            #special  ->  color: red;   font-weight: bold;
+
+       Rules 2 and 3 won't do anything until you finish TODO 3 and TODO 4.
+  -->
+<style>
+    h2 {
+        color: green;
+        font-size: 24px;
+    }
+
+    .intro {
+        background-color: lightyellow;
+        padding: 10px;
+    }
+
+    #special {
+        color: red;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+
+  <!-- ===== TODO 1: Add an inline style ===== -->
+  <!-- Task: Add a style attribute to this h1 to make it blue.
+       Use: style="color: blue;"
+       Save and refresh. Only this one heading turns blue.
+  -->
+  <h1 style="color: blue;">Inline and Internal CSS Practice</h1>
+
+  <p>This page practices two ways to add CSS: inline styles and an internal stylesheet.
+     The third way, an external stylesheet, is in the 05b task.</p>
+
+  <section>
+    <h2>Element Selectors</h2>
+    <p>An element selector uses the tag name, like <code>h2</code>. It styles every tag of that type.
+       After TODO 2, all three h2 headings on this page turn green at once.</p>
+  </section>
+
+  <section>
+    <h2>Class Selectors</h2>
+
+    <!-- ===== TODO 3: Add a class to two paragraphs ===== -->
+    <!-- Task: Add class="intro" to BOTH paragraphs below.
+         Save and refresh. Both get the same yellow background from one rule.
+    -->
+    <p class="intro">A class selector starts with a dot, like <code>.intro</code>.</p>
+    <p class="intro"> One class can be used on as many tags as you want. This paragraph uses the same class as the one above.</p>
+  </section>
+
+  <section>
+    <h2>ID Selectors</h2>
+
+    <!-- ===== TODO 4: Add an id to this div ===== -->
+    <!-- Task: Add id="special" to the div below.
+         Save and refresh. The text turns red and bold.
+    -->
+    <div id="special">An ID selector starts with a hash, like <code>#special</code>. An id can only be used on one tag per page.</div>
+  </section>
+
+  <!-- ===== TODO 5: Which one wins? ===== -->
+  <!-- Task:
+       1. Add this rule to your <style> block:   h1 { color: orange; }
+       2. Save and refresh. The h1 stays BLUE. The inline style from TODO 1
+          beats the rule in the <style> block.
+       3. Now delete style="color: blue;" from the h1.
+       4. Save and refresh. The h1 turns ORANGE.
+
+       Rule to remember: an inline style beats a stylesheet rule.
+       When you move to a stylesheet, delete the old inline styles.
+  -->
+
+  <footer>
+    <p>When you're done: the h1 is orange, all three h2 headings are green,
+       two paragraphs have a yellow background, and the ID sentence is red and bold.</p>
+  </footer>
+
+</body>
+</html>
