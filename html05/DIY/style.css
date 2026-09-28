@@ -1,0 +1,105 @@
+body {
+  background-color: rgb(13, 13, 90);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+section {
+    border: 5px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    background-color: darkgray;
+}
+
+header {
+    border: 5px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    background-color: darkgray;
+    text-align: center;
+}
+
+footer {
+    border: 5px solid black;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    background-color: darkgray;
+    text-align: center;
+}
+
+h1, h2 {
+    text-decoration: underline;
+    text-align: left;
+    color: blue;
+}
+
+nav {
+    border: 3px solid black;
+    border-radius: 20px;
+    padding: 10px;
+    background-color: rgb(90, 90, 90);
+    margin: 20px;
+}
+
+a {
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    background-color: rgb(39, 39, 39);
+    color: white;
+    text-decoration: none;
+}
+
+dl {
+    margin: 20px 0;
+    line-height: 1.6;
+}
+
+dt {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+dd {
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+table {
+    border: 5px solid black;
+    border-radius: 20px;
+    text-align: center;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 2px solid black;
+    padding: 10px;
+}
+
+caption {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+iframe {
+    width: 100%;
+    height: 100vh;
+}
+
+img {
+    width: 30%;
+    height: auto;
+}
+
+figcaption {
+    color: white;
+    border: 2px solid black;
+    background-color: darkgreen;
+    border-radius: 5px;
+    display: inline-block;
+    padding: 4px 8px;
+}
