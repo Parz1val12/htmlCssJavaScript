@@ -12,7 +12,7 @@ body {
 }
 
 .intro {
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 /* ===== DEMO 2: nested em ===== */
@@ -24,7 +24,7 @@ body {
 
 /* ===== DEMO 3: shrinking text ===== */
 .comment {
-  font-size: 0.85em;
+  font-size: 0.85rem;
   border-left: 3px solid steelblue;
   padding-left: 0.5rem;
 }
