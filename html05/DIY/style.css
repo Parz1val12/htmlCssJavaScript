@@ -11,6 +11,14 @@ section {
     background-color: darkgray;
 }
 
+#promo {
+    border: 5px solid yellow;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+    background-color: yellowgreen;
+}
+
 header {
     border: 5px solid black;
     border-radius: 20px;
