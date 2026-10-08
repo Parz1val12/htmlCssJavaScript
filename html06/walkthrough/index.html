@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Model Practice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;                  /* remove the browser's default space around the page */
+      background-color: #eeeeee;
+    }
+    /* Add each new rule below this line */
+    * {
+        box-sizing: border-box
+    }
+
+    .card {
+        display: inline-block;
+        vertical-align: top;
+        width: 15rem;
+        border: 2px solid blue;
+        border-radius: 8px;
+        background-color: white;
+    }
+    
+    .card h2 {
+        margin-top: 0;
+    }
+
+    main {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 1rem;
+    }
+
+    nav a {
+      display: inline-block;
+      padding: 2rem 2rem;
+      margin-right: 0.5rem;
+      background-color: white;
+      color: blue;
+      text-decoration: none;
+      border-radius: 4px;
+      border: 2px solid blue;
+    }
+
+    nav a:hover {
+      background-color: lightblue;
+      color: white;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background-color: darkblue;
+      color: white;
+      padding: 1rem;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Box Model Practice</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <div class="card">
+      <h2>Card One</h2>
+      <p>A card is a box with a heading and some text.</p>
+    </div>
+    <div class="card">
+      <h2>Card Two</h2>
+      <p>We will use cards to learn padding, border, and margin.</p>
+    </div>
+
+    <p>This page is getting longer on purpose so it takes up more vertical space than the screen. We are adding several paragraphs to make the content extend well past the first viewport.</p>
+    <p>Each paragraph adds more text, more height, and more room for the box model to show how layout can stretch as content grows. The goal is to create a long enough page that you can scroll through it.</p>
+    <p>One box can be surrounded by margin, padding, and border. Another box can be displayed inline or block. Together, these boxes help teach how CSS arranges content on a page.</p>
+    <p>Learning web design becomes easier when you can see the page grow and understand how elements stack on top of each other. This is a practical example of how HTML and CSS work together to build structure and style.</p>
+    <p>More content means more height, and more height means the page can extend beyond the browser window. That is exactly what we want here so the page becomes taller than the visible area.</p>
+    <p>It is useful to practice with repeated blocks of text because it helps you understand spacing, flow, and rhythm. The browser keeps adding each element below the last one until the page reaches a natural new height.</p>
+    <p>As you build bigger pages, you will notice how borders, margins, paddings, and sticky headers all affect the final layout. A little extra content makes it much easier to see those behaviors.</p>
+    <p>Here is one more paragraph to keep the page going. The longer the content, the more obviously the page exceeds the visible height. This extra text is intentionally repetitive so the page definitely scrolls.</p>
+    <p>And another chunk of text for the same purpose. This makes the page even taller, giving you a real-world example of content extending beyond the initial viewport.</p>
+    <p>Final paragraph: the browser will continue stacking these sections below the header and cards, making the whole page longer than the screen. That is enough content to create a scrolling page.</p>
+  </main>
+</body>
+</html>
