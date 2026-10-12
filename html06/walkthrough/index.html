@@ -59,6 +59,35 @@
       padding: 1rem;
     }
 
+    header h1 {
+      margin: 0;
+    }
+
+    .has-badge {
+      position: relative;
+    }
+
+    .badge {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      background-color: yellow;
+      color: black;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+    }
+
+    .to-top {
+      position: fixed;
+      bottom: 1rem;
+      right: 1rem;
+      background-color: skyblue;
+      color: white;
+      padding: 0.25rem 0.5rem;
+      text-decoration: none;
+      border-radius: 2px;
+    }
+
   </style>
 </head>
 <body>
@@ -75,9 +104,16 @@
       <h2>Card One</h2>
       <p>A card is a box with a heading and some text.</p>
     </div>
+
     <div class="card">
       <h2>Card Two</h2>
       <p>We will use cards to learn padding, border, and margin.</p>
+    </div>
+
+    <div class="card has-badge">
+      <span class="badge">NEW</span>
+      <h2>Card 3 Three</h2>
+      <p>This card has a badge</p>
     </div>
 
     <p>This page is getting longer on purpose so it takes up more vertical space than the screen. We are adding several paragraphs to make the content extend well past the first viewport.</p>
@@ -91,5 +127,6 @@
     <p>And another chunk of text for the same purpose. This makes the page even taller, giving you a real-world example of content extending beyond the initial viewport.</p>
     <p>Final paragraph: the browser will continue stacking these sections below the header and cards, making the whole page longer than the screen. That is enough content to create a scrolling page.</p>
   </main>
+  <a href="#" class="to-top">Back to top</a>
 </body>
 </html>
