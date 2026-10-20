@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C&R Automotive Dealing | Book</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="hero-slide hero-slide-1" aria-hidden="true"></div>
+      <div class="hero-slide hero-slide-2" aria-hidden="true"></div>
+      <div class="hero-slide hero-slide-3" aria-hidden="true"></div>
+      <h1>Book a Service</h1>
+    </header>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="book.html">Book Now</a>
+    </nav>
+
+    <main>
+      <section class="booking-panel">
+        <h2>Request Your Appointment</h2>
+
+        <form>
+          <div class="form-grid">
+            <div class="field">
+              <label for="first-name">First Name</label>
+              <input type="text" id="first-name" name="first-name" placeholder="First name" />
+            </div>
+
+            <div class="field">
+              <label for="last-name">Last Name</label>
+              <input type="text" id="last-name" name="last-name" placeholder="Last name" />
+            </div>
+
+            <div class="field">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" />
+            </div>
+
+            <div class="field">
+              <label for="vehicle">Vehicle</label>
+              <input type="text" id="vehicle" name="vehicle" placeholder="Make / Model / Year" />
+            </div>
+
+            <div class="field full">
+              <label>Services Needed</label>
+              <div class="checkbox-group">
+                <label class="check-item"><input type="checkbox" name="service" value="Custom Paint Job" /> Custom Paint Job</label>
+                <label class="check-item"><input type="checkbox" name="service" value="Vehicle Wrap" /> Vehicle Wrap</label>
+                <label class="check-item"><input type="checkbox" name="service" value="Rust Removal" /> Rust Removal</label>
+                <label class="check-item"><input type="checkbox" name="service" value="Body Repair" /> Body Repair</label>
+                <label class="check-item"><input type="checkbox" name="service" value="Other" /> Other</label>
+              </div>
+            </div>
+
+            <div class="field full">
+              <label for="details">Project Details</label>
+              <textarea id="details" name="details" rows="6" placeholder="Tell us about the vehicle, damage, color, finish, or anything else you want us to know."></textarea>
+            </div>
+
+            <div class="field">
+              <label for="date">Preferred Date</label>
+              <input type="date" id="date" name="date" />
+            </div>
+
+            <div class="field">
+              <label for="time">Preferred Time</label>
+              <input type="time" id="time" name="time" />
+            </div>
+          </div>
+
+          <button type="submit">Submit Booking Request</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>We’ll get back to you to finalize some things and confirm your appointment.</p><br>
+      <a href="mailto:example@ex.com">example@ex.com</a><br><br>
+      <a href="tel:+15551234567">(555) 123-4567</a><br><br>
+      <p>&copy; 2026 C&R Automotive Dealing</p>
+    </footer>
+  </body>
+</html>

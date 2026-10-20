@@ -1,104 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>C&R Automotive</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts for a clean, modern look -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
-</head>
-<body>
-
-    <!-- 2. Sticky Navigation Bar -->
-    <header class="sticky-nav">
-        <div class="nav-container">
-            <div class="logo">C&R <span>Automotive</span></div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-            </ul>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C&R Automotive Dealing | Home</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="hero-slide hero-slide-1" aria-hidden="true"></div>
+      <div class="hero-slide hero-slide-2" aria-hidden="true"></div>
+      <div class="hero-slide hero-slide-3" aria-hidden="true"></div>
+      <h1>C&R Automotive Dealing</h1>
     </header>
 
-    <main class="main-content">
-        
-        <!-- 1. Scrolling Pictures Section Top -->
-        <section class="scrolling-section">
-            <div class="scroll-container">
-                <div class="scroll-card"><span>Vehicle 01</span></div>
-                <div class="scroll-card"><span>Vehicle 02</span></div>
-                <div class="scroll-card"><span>Vehicle 03</span></div>
-                <div class="scroll-card"><span>Vehicle 04</span></div>
-            </div>
-        </section>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="book.html">Book Now</a>
+    </nav>
 
-        <!-- 3. About / Article Section -->
-        <section id="about" class="about-article-section">
-            <div class="container">
-                <h2>About C&R Automotive</h2>
-                <article class="article-box">
-                    <p>Welcome to C&R Automotive. We specialize in high-performance tuning, custom modifications, and top-tier automotive care. Engineered for speed and styled for precision, our work speaks for itself on the track and the street.</p>
-                </article>
-            </div>
-        </section>
+    <main>
+      <article id="about">
+        <h2>About Our Company</h2>
+        <p>
+          C&R Automotive Dealing specializes in high-quality paint jobs, custom vehicle
+          wraps, and rust removal services that restore vehicles to their best possible
+          condition. We take pride in precision workmanship and attention to detail.
+        </p>
+        <p>
+          Whether you're refreshing the look of your vehicle, protecting its finish, or
+          repairing damage caused by corrosion, our team delivers clean, reliable results
+          with craftsmanship you can trust.
+        </p>
+      </article>
 
-        <!-- Main Grid Area for Sections 4, 5, and 6 -->
-        <section class="content-grid-section">
-            <div class="container grid-container">
-                
-                <!-- 4. Scrolling Pictures Section Middle -->
-                <div class="grid-item">
-                    <h3>Project Showcase</h3>
-                    <div class="mini-scroller">
-                        <div class="mini-card"><span>Shot A</span></div>
-                        <div class="mini-card"><span>Shot B</span></div>
-                        <div class="mini-card"><span>Shot C</span></div>
-                    </div>
-                </div>
+      <section id="services">
+        <h2>Our Services</h2>
 
-                <!-- 5. Price and Details Box 1 -->
-                <div id="pricing" class="grid-item price-card">
-                    <h3>Performance Tune</h3>
-                    <p class="price-tag">$499</p>
-                    <ul class="details-list">
-                        <li>Custom Dyno Tuning</li>
-                        <li>Air/Fuel Ratio Optimization</li>
-                        <li>Throttle Response Mapping</li>
-                    </ul>
-                    <a href="#" class="btn-red">Select Package</a>
-                </div>
+        <article>
+          <img
+            src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&fit=crop&w=900&q=80"
+            alt="Vehicle paint job"
+            width="420"
+            height="260"
+          />
+          <div>
+            <h3>Custom Paint Jobs</h3>
+            <p>
+              From color changes to full refinishing, we provide smooth, durable finishes
+              that elevate the overall look and value of your vehicle.
+            </p>
+            <p><strong>Starting at $1,200</strong></p>
+          </div>
+        </article>
 
-                <!-- 6. Scrolling Pictures Section Bottom & Second Price/Details Box -->
-                <div class="grid-item">
-                    <h3>Engine Builds</h3>
-                    <div class="mini-scroller">
-                        <div class="mini-card"><span>Build 1</span></div>
-                        <div class="mini-card"><span>Build 2</span></div>
-                    </div>
-                </div>
+        <article>
+          <img
+            src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=900&q=80"
+            alt="Vehicle wrap installation"
+            width="420"
+            height="260"
+          />
+          <div>
+            <h3>Vehicle Wraps</h3>
+            <p>
+              Stand out with bold color, satin finishes, or protective wraps designed to
+              enhance style while keeping your vehicle protected from everyday wear.
+            </p>
+            <p><strong>Starting at $1,800</strong></p>
+          </div>
+        </article>
 
-                <div class="grid-item price-card">
-                    <h3>Full Engine Overhaul</h3>
-                    <p class="price-tag">$2,499</p>
-                    <ul class="details-list">
-                        <li>Complete Disassembly & Inspection</li>
-                        <li>Performance Internals Install</li>
-                        <li>Stress Testing & Calibration</li>
-                    </ul>
-                    <a href="#" class="btn-red">Select Package</a>
-                </div>
-
-            </div>
-        </section>
-
+        <article>
+          <img
+            src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=900&q=80"
+            alt="Rust removal and body repair"
+            width="420"
+            height="260"
+          />
+          <div>
+            <h3>Rust Removal</h3>
+            <p>
+              We remove corrosion, repair affected metal, and restore strength and
+              appearance to keep your vehicle safe, solid, and road-ready.
+            </p>
+            <p><strong>Starting at $900</strong></p>
+          </div>
+        </article>
+      </section>
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 C&R Automotive. All Rights Reserved.</p>
+    <footer id="contact">
+      <p>Contact C&R Automotive Dealing for premium paint, wrap, and rust repair services.</p><br>
+      <a href="mailto:example@ex.com">example@ex.com</a><br><br>
+      <a href="tel:+15551234567">(555) 123-4567</a><br><br>
+      <p>&copy; 2026 C&R Automotive Dealing</p>
     </footer>
-
-</body>
+  </body>
 </html>
