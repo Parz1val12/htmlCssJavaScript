@@ -155,7 +155,9 @@
        - flex-wrap: wrap
        - gap: 1rem */
     .gallery {
-
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
     }
 
     /* TODO 6: Gallery photo size.
@@ -163,7 +165,8 @@
        - min-width: 12rem    (but never get skinnier than 12rem, so they wrap)
        Check: photos fill the row. Make the preview narrower and they drop to the next line. */
     .photo {
-
+      flex: 1;
+      min-width: 12rem;
     }
 
     /* TODO 7: Testimonials.
@@ -172,7 +175,9 @@
        - flex-wrap: wrap
        - gap: 1.5rem */
     .testimonials {
-
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
     }
 
     /* TODO 8: Each testimonial.
@@ -180,7 +185,8 @@
        - min-width: 15rem
        Check: three testimonial boxes side by side, the same width. */
     .testimonial {
-
+      flex: 1;
+      min-width: 15rem;
     }
 
     /* TODO 9: Star rating.
@@ -189,7 +195,8 @@
        - gap: 0.25rem
        Check: the stars sit in one row with a little space between them. */
     .stars {
-
+      display: flex;
+      gap: 0.25rem;
     }
 
     /* TODO 10: Footer.
@@ -200,7 +207,10 @@
        - gap: 2rem
        Check: one section on the left, one in the middle, one on the right. */
     .footer {
-
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
     }
 
   </style>
