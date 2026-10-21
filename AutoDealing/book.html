@@ -23,7 +23,7 @@
       <section class="booking-panel">
         <h2>Request Your Appointment</h2>
 
-        <form>
+        <form id="booking-form">
           <div class="form-grid">
             <div class="field">
               <label for="first-name">First Name</label>
@@ -74,6 +74,21 @@
 
           <button type="submit">Submit Booking Request</button>
         </form>
+
+        <script>
+          document.getElementById('booking-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const confirmed = window.confirm(
+              'Are you sure you want to submit this booking request? Please review all entered information before continuing.'
+            );
+
+            if (confirmed) {
+              alert('Booking request submitted successfully.');
+              this.reset();
+            }
+          });
+        </script>
       </section>
     </main>
 
