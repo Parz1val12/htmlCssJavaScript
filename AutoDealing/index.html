@@ -38,12 +38,18 @@
         <h2>Our Services</h2>
 
         <article>
-          <img
-            src="https://images.unsplash.com/photo-1489824904134-891ab64532f1?auto=format&fit=crop&w=900&q=80"
-            alt="Vehicle paint job"
-            width="420"
-            height="260"
-          />
+          <div class="image-slider" aria-label="Custom paint job gallery">
+            <div class="slides">
+              <img class="slide active" src="images/images.jpg" alt="Vehicle paint job preview 1" />
+              <img class="slide" src="images/images (1).jpg" alt="Vehicle paint job preview 2" />
+              <img class="slide" src="images/images (2).jpg" alt="Vehicle paint job preview 3" />
+            </div>
+            <div class="slider-dots" aria-label="Paint job image navigation">
+              <button class="dot active" type="button" aria-label="Show image 1" aria-pressed="true"></button>
+              <button class="dot" type="button" aria-label="Show image 2" aria-pressed="false"></button>
+              <button class="dot" type="button" aria-label="Show image 3" aria-pressed="false"></button>
+            </div>
+          </div>
           <div>
             <h3>Custom Paint Jobs</h3>
             <p>
@@ -55,12 +61,18 @@
         </article>
 
         <article>
-          <img
-            src="https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?auto=format&fit=crop&w=900&q=80"
-            alt="Vehicle wrap installation"
-            width="420"
-            height="260"
-          />
+          <div class="image-slider" aria-label="Vehicle wrap gallery">
+            <div class="slides">
+              <img class="slide active" src="images/images.jpg" alt="Vehicle wrap preview 1" />
+              <img class="slide" src="images/images (1).jpg" alt="Vehicle wrap preview 2" />
+              <img class="slide" src="images/images (2).jpg" alt="Vehicle wrap preview 3" />
+            </div>
+            <div class="slider-dots" aria-label="Wrap image navigation">
+              <button class="dot active" type="button" aria-label="Show image 1" aria-pressed="true"></button>
+              <button class="dot" type="button" aria-label="Show image 2" aria-pressed="false"></button>
+              <button class="dot" type="button" aria-label="Show image 3" aria-pressed="false"></button>
+            </div>
+          </div>
           <div>
             <h3>Vehicle Wraps</h3>
             <p>
@@ -72,12 +84,18 @@
         </article>
 
         <article>
-          <img
-            src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&w=900&q=80"
-            alt="Rust removal and body repair"
-            width="420"
-            height="260"
-          />
+          <div class="image-slider" aria-label="Rust removal gallery">
+            <div class="slides">
+              <img class="slide active" src="images/images.jpg" alt="Rust removal preview 1" />
+              <img class="slide" src="images/images (1).jpg" alt="Rust removal preview 2" />
+              <img class="slide" src="images/images (2).jpg" alt="Rust removal preview 3" />
+            </div>
+            <div class="slider-dots" aria-label="Rust removal image navigation">
+              <button class="dot active" type="button" aria-label="Show image 1" aria-pressed="true"></button>
+              <button class="dot" type="button" aria-label="Show image 2" aria-pressed="false"></button>
+              <button class="dot" type="button" aria-label="Show image 3" aria-pressed="false"></button>
+            </div>
+          </div>
           <div>
             <h3>Rust Removal</h3>
             <p>
@@ -96,5 +114,45 @@
       <a href="tel:+15551234567">(555) 123-4567</a><br><br>
       <p>&copy; 2026 C&R Automotive Dealing</p>
     </footer>
+
+    <script>
+      document.querySelectorAll('.image-slider').forEach((slider) => {
+        const slides = slider.querySelectorAll('.slide');
+        const dots = slider.querySelectorAll('.dot');
+        let currentIndex = 0;
+
+        const showSlide = (index) => {
+          currentIndex = (index + slides.length) % slides.length;
+
+          slides.forEach((slide, slideIndex) => {
+            slide.classList.toggle('active', slideIndex === currentIndex);
+          });
+
+          dots.forEach((dot, dotIndex) => {
+            const isActive = dotIndex === currentIndex;
+            dot.classList.toggle('active', isActive);
+            dot.setAttribute('aria-pressed', String(isActive));
+          });
+        };
+
+        const startAutoPlay = () => {
+          return setInterval(() => {
+            showSlide(currentIndex + 1);
+          }, 3500);
+        };
+
+        let autoPlay = startAutoPlay();
+
+        dots.forEach((dot, index) => {
+          dot.addEventListener('click', () => {
+            showSlide(index);
+            clearInterval(autoPlay);
+            autoPlay = startAutoPlay();
+          });
+        });
+
+        showSlide(0);
+      });
+    </script>
   </body>
 </html>
