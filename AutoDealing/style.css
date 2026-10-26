@@ -2,6 +2,18 @@
   box-sizing: border-box;
 }
 
+*:not(img):not(svg):not(video):not(canvas) {
+  border-color: red !important;
+}
+
+img,
+.image-slider .slide {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 :root {
   --bg: #070b10;
   --panel: rgba(16, 18, 22, 0.92);
@@ -22,16 +34,7 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   color: var(--text);
-  background-color: #111111;
-  background-image:
-    linear-gradient(135deg, #1b1b1b 25%, transparent 25%),
-    linear-gradient(225deg, #1b1b1b 25%, transparent 25%),
-    linear-gradient(45deg, #1b1b1b 25%, transparent 25%),
-    linear-gradient(315deg, #1b1b1b 25%, #0a0a0a 25%);
-  background-position: 16px 0, 16px 0, 0 0, 0 0;
-  background-size: 32px 32px;
-  background-repeat: repeat;
-  background-attachment: fixed;
+  background: #0b0b0b;
   position: relative;
 }
 
@@ -272,7 +275,7 @@ h2 {
   transition: transform 0.35s ease, filter 0.35s ease;
 }
 
-.image-slider {
+.comparison-slider {
   position: relative;
   width: 100%;
   height: 260px;
@@ -281,60 +284,77 @@ h2 {
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
   background: rgba(255, 255, 255, 0.02);
+  user-select: none;
+  --reveal: 50;
 }
 
-.image-slider .slides {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.image-slider .slide {
+.comparison-slider img {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0;
-  transform: scale(1.08);
-  transition: opacity 0.55s ease, transform 0.55s ease;
+  display: block;
 }
 
-.image-slider .slide.active {
-  opacity: 1;
-  transform: scale(1);
+.comparison-slider .after-image {
+  z-index: 1;
 }
 
-.slider-dots {
+.comparison-slider .before-layer {
   position: absolute;
-  left: 50%;
-  bottom: 14px;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 8px;
+  inset: 0;
+  overflow: hidden;
   z-index: 2;
-  padding: 0.3rem 0.55rem;
-  border-radius: 999px;
-  background: rgba(10, 12, 16, 0.38);
-  backdrop-filter: blur(4px);
+  clip-path: inset(0 0 0 0 round 0px);
 }
 
-.slider-dots .dot {
-  width: 12px;
-  height: 12px;
-  border: 0;
+.comparison-slider .before-layer img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.comparison-slider .divider {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(var(--reveal) * 1%);
+  width: 1px;
+  background: rgba(255, 59, 48, 0.9);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.05), 0 0 12px rgba(255, 59, 48, 0.25);
+  z-index: 3;
+  pointer-events: none;
+}
+
+.comparison-slider .divider::before {
+  content: "↔";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.7);
-  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-  padding: 0;
-  transition: background 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  background: rgba(17, 18, 22, 0.88);
+  color: #ffffff;
+  display: grid;
+  place-items: center;
+  font-size: 0.75rem;
+  line-height: 1;
+  border: 1px solid rgba(255, 59, 48, 0.8);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.slider-dots .dot.active {
-  background: var(--red);
-  box-shadow: 0 0 0 4px rgba(255, 59, 48, 0.22);
-  transform: scale(1.08);
+.comparison-slider .compare-range {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: ew-resize;
+  z-index: 4;
 }
 
 #services article:hover img,

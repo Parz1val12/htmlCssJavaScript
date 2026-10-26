@@ -38,17 +38,13 @@
         <h2>Our Services</h2>
 
         <article>
-          <div class="image-slider" aria-label="Custom paint job gallery">
-            <div class="slides">
-              <img class="slide active" src="images/images.jpg" alt="Vehicle paint job preview 1" />
-              <img class="slide" src="images/images (1).jpg" alt="Vehicle paint job preview 2" />
-              <img class="slide" src="images/images (2).jpg" alt="Vehicle paint job preview 3" />
+          <div class="comparison-slider" aria-label="Custom paint job before and after comparison">
+            <img class="after-image" src="images/images.jpg" alt="After custom paint job" />
+            <div class="before-layer" aria-label="Before custom paint job reveal">
+              <img src="images/images (1).jpg" alt="Before custom paint job" />
             </div>
-            <div class="slider-dots" aria-label="Paint job image navigation">
-              <button class="dot active" type="button" aria-label="Show image 1" aria-pressed="true"></button>
-              <button class="dot" type="button" aria-label="Show image 2" aria-pressed="false"></button>
-              <button class="dot" type="button" aria-label="Show image 3" aria-pressed="false"></button>
-            </div>
+            <div class="divider" aria-hidden="true"></div>
+            <input class="compare-range" type="range" min="0" max="100" value="50" aria-label="Reveal before and after comparison" />
           </div>
           <div>
             <h3>Custom Paint Jobs</h3>
@@ -61,17 +57,13 @@
         </article>
 
         <article>
-          <div class="image-slider" aria-label="Vehicle wrap gallery">
-            <div class="slides">
-              <img class="slide active" src="images/images.jpg" alt="Vehicle wrap preview 1" />
-              <img class="slide" src="images/images (1).jpg" alt="Vehicle wrap preview 2" />
-              <img class="slide" src="images/images (2).jpg" alt="Vehicle wrap preview 3" />
+          <div class="comparison-slider" aria-label="Vehicle wrap before and after comparison">
+            <img class="after-image" src="images/images (2).jpg" alt="After vehicle wrap" />
+            <div class="before-layer" aria-label="Before vehicle wrap reveal">
+              <img src="images/images.jpg" alt="Before vehicle wrap" />
             </div>
-            <div class="slider-dots" aria-label="Wrap image navigation">
-              <button class="dot active" type="button" aria-label="Show image 1" aria-pressed="true"></button>
-              <button class="dot" type="button" aria-label="Show image 2" aria-pressed="false"></button>
-              <button class="dot" type="button" aria-label="Show image 3" aria-pressed="false"></button>
-            </div>
+            <div class="divider" aria-hidden="true"></div>
+            <input class="compare-range" type="range" min="0" max="100" value="50" aria-label="Reveal before and after comparison" />
           </div>
           <div>
             <h3>Vehicle Wraps</h3>
@@ -84,17 +76,13 @@
         </article>
 
         <article>
-          <div class="image-slider" aria-label="Rust removal gallery">
-            <div class="slides">
-              <img class="slide active" src="images/images.jpg" alt="Rust removal preview 1" />
-              <img class="slide" src="images/images (1).jpg" alt="Rust removal preview 2" />
-              <img class="slide" src="images/images (2).jpg" alt="Rust removal preview 3" />
+          <div class="comparison-slider" aria-label="Rust removal before and after comparison">
+            <img class="after-image" src="images/images (2).jpg" alt="After rust removal" />
+            <div class="before-layer" aria-label="Before rust removal reveal">
+              <img src="images/images (1).jpg" alt="Before rust removal" />
             </div>
-            <div class="slider-dots" aria-label="Rust removal image navigation">
-              <button class="dot active" type="button" aria-label="Show image 1" aria-pressed="true"></button>
-              <button class="dot" type="button" aria-label="Show image 2" aria-pressed="false"></button>
-              <button class="dot" type="button" aria-label="Show image 3" aria-pressed="false"></button>
-            </div>
+            <div class="divider" aria-hidden="true"></div>
+            <input class="compare-range" type="range" min="0" max="100" value="50" aria-label="Reveal before and after comparison" />
           </div>
           <div>
             <h3>Rust Removal</h3>
@@ -116,42 +104,20 @@
     </footer>
 
     <script>
-      document.querySelectorAll('.image-slider').forEach((slider) => {
-        const slides = slider.querySelectorAll('.slide');
-        const dots = slider.querySelectorAll('.dot');
-        let currentIndex = 0;
+      document.querySelectorAll('.comparison-slider').forEach((slider) => {
+        const beforeLayer = slider.querySelector('.before-layer');
+        const divider = slider.querySelector('.divider');
+        const range = slider.querySelector('.compare-range');
 
-        const showSlide = (index) => {
-          currentIndex = (index + slides.length) % slides.length;
-
-          slides.forEach((slide, slideIndex) => {
-            slide.classList.toggle('active', slideIndex === currentIndex);
-          });
-
-          dots.forEach((dot, dotIndex) => {
-            const isActive = dotIndex === currentIndex;
-            dot.classList.toggle('active', isActive);
-            dot.setAttribute('aria-pressed', String(isActive));
-          });
+        const updateSlider = () => {
+          const value = Number(range.value);
+          slider.style.setProperty('--reveal', value);
+          beforeLayer.style.clipPath = `inset(0 ${100 - value}% 0 0 round 22px)`;
+          divider.style.left = `${value}%`;
         };
 
-        const startAutoPlay = () => {
-          return setInterval(() => {
-            showSlide(currentIndex + 1);
-          }, 3500);
-        };
-
-        let autoPlay = startAutoPlay();
-
-        dots.forEach((dot, index) => {
-          dot.addEventListener('click', () => {
-            showSlide(index);
-            clearInterval(autoPlay);
-            autoPlay = startAutoPlay();
-          });
-        });
-
-        showSlide(0);
+        range.addEventListener('input', updateSlider);
+        updateSlider();
       });
     </script>
   </body>
