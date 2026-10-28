@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C&R Automotive Dealing & Precision Care</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="site-nav">
+    <div class="nav-brand">C&R Automotive</div>
+    <div class="nav-links">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#booking">Book Now</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero Container -->
+  <header id="home" class="hero-container">
+    <p class="eyebrow">Luxury finish. Precision care.</p>
+    <h1>Automotive Detailing & Customization</h1>
+    <p class="tagline">C&R Precision Auto Care, Paint Correction, Wraps & Restoration</p>
+    <div class="hero-actions">
+      <a href="#booking" class="cta-button primary">Book an Appointment</a>
+      <a href="#pricing" class="cta-button secondary">View Packages</a>
+    </div>
+  </header>
+
+  <!-- Interactive Top Carousel -->
+  <section class="carousel-section" id="carousel">
+    <div class="carousel-track" id="carouselTrack">
+      
+      <!-- Slide 1 -->
+      <div class="carousel-slide">
+        <div class="slide-caption-bg"></div>
+        <div class="slide-caption">
+          <h2>Multi-Stage Paint Correction</h2>
+          <p>Mirror Finish & Swirl Removal</p>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-slide">
+        <div class="slide-caption-bg"></div>
+        <div class="slide-caption">
+          <h2>Premium Hand Wash & Foam Bath</h2>
+          <p>Gentle, Scratch-Free Decontamination</p>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="carousel-slide">
+        <div class="slide-caption-bg"></div>
+        <div class="slide-caption">
+          <h2>Luxury Interior Detailing</h2>
+          <p>Leather Conditioning & Steam Cleansing</p>
+        </div>
+      </div>
+
+      <!-- Slide 4 -->
+      <div class="carousel-slide">
+        <div class="slide-caption-bg"></div>
+        <div class="slide-caption">
+          <h2>Ceramic Coating Protection</h2>
+          <p>Hydrophobic Gloss Shield</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-btn prev" id="prevBtn" aria-label="Previous Slide">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    </button>
+    <button class="carousel-btn next" id="nextBtn" aria-label="Next Slide">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </button>
+
+    <!-- Navigation Dots -->
+    <div class="carousel-dots" id="carouselDots"></div>
+  </section>
+
+  <main>
+    <!-- About Our Company -->
+    <article id="about" class="description-container">
+      <h2 class="section-heading">About Our Company</h2>
+      <p>
+        C&R Automotive Dealing specializes in high-end exterior restoration, custom vehicle wraps, rust removal services, paint corrections, and full-service auto care[cite: 1, 5, 6]. From daily drivers to exotic paint corrections, our team uses top-grade equipment and advanced techniques to bring out a flawless, mirror-like gloss on every vehicle[cite: 5].
+      </p>
+      <p>
+        Whether you're refreshing the look of your vehicle, protecting its finish, or repairing damage caused by corrosion, our team delivers clean, reliable results with craftsmanship you can trust[cite: 6].
+      </p>
+    </article>
+
+    <!-- Feature Strip -->
+    <section class="feature-strip">
+      <h2 class="section-heading">Why Drivers Choose Us</h2>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-number">100+</div>
+          <div class="feature-label">Vehicles Detailed</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-number">2+</div>
+          <div class="feature-label">Years of Craft</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-number">5★</div>
+          <div class="feature-label">Client Experience</div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-number">100%</div>
+          <div class="feature-label">Finish Focused</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Our Services with Interactive Comparison Sliders -->
+    <section id="services">
+      <h2 class="section-heading">Our Services & Transformations</h2>
+
+      <article class="service-row">
+        <div class="comparison-slider" aria-label="Custom paint job before and after comparison">
+          <img class="after-image" src="images/W1.jpg" alt="After custom paint job" />
+          <div class="before-layer" aria-label="Before custom paint job reveal">
+            <img src="images/W2.jpg" alt="Before custom paint job" />
+          </div>
+          <div class="divider" aria-hidden="true"></div>
+          <input class="compare-range" type="range" min="0" max="100" value="50" aria-label="Reveal before and after comparison" />
+        </div>
+        <div class="service-details">
+          <h3>Custom Paint Jobs</h3>
+          <p>
+            From color changes to full refinishing, we provide smooth, durable finishes
+            that elevate the overall look and value of your vehicle[cite: 6].
+          </p>
+          <p class="service-price">Starting at \$1,200</p>
+          <a href="#booking" class="btn-select">Book Service</a>
+        </div>
+      </article>
+
+      <article class="service-row">
+        <div class="comparison-slider" aria-label="Vehicle wrap before and after comparison">
+          <img class="after-image" src="images/W2.jpg" alt="After vehicle wrap" />
+          <div class="before-layer" aria-label="Before vehicle wrap reveal">
+            <img src="images/W1.jpg" alt="Before vehicle wrap" />
+          </div>
+          <div class="divider" aria-hidden="true"></div>
+          <input class="compare-range" type="range" min="0" max="100" value="50" aria-label="Reveal before and after comparison" />
+        </div>
+        <div class="service-details">
+          <h3>Vehicle Wraps</h3>
+          <p>
+            Stand out with bold color, satin finishes, or protective wraps designed to
+            enhance style while keeping your vehicle protected from everyday wear[cite: 6].
+          </p>
+          <p class="service-price">Starting at \$1,800</p>
+          <a href="#booking" class="btn-select">Book Service</a>
+        </div>
+      </article>
+
+      <article class="service-row">
+        <div class="comparison-slider" aria-label="Rust removal before and after comparison">
+          <img class="after-image" src="images/W1.jpg" alt="After rust removal" />
+          <div class="before-layer" aria-label="Before rust removal reveal">
+            <img src="images/W2.jpg" alt="Before rust removal" />
+          </div>
+          <div class="divider" aria-hidden="true"></div>
+          <input class="compare-range" type="range" min="0" max="100" value="50" aria-label="Reveal before and after comparison" />
+        </div>
+        <div class="service-details">
+          <h3>Rust Removal</h3>
+          <p>
+            We remove corrosion, repair affected metal, and restore strength and
+            appearance to keep your vehicle safe, solid, and road-ready[cite: 6].
+          </p>
+          <p class="service-price">Starting at \$900</p>
+          <a href="#booking" class="btn-select">Book Service</a>
+        </div>
+      </article>
+    </section>
+
+    <!-- Pricing Container -->
+    <section id="pricing" class="pricing-container">
+      <h2 class="section-heading">Our Packages</h2>
+      <p class="pricing-note">Pricing varies based on the vehicle’s condition, size, and the level of detailing required.</p>
+
+      <div class="pricing-cards">
+        <div class="price-card">
+          <div>
+            <h3>Full Detail</h3>
+            <div class="price">\$165</div>
+            <p class="description">Includes full interior deep clean, exterior hand wash, wheel de-con, and protective spray sealant finish.</p>
+          </div>
+          <a href="#booking" class="btn-select">Book Service</a>
+        </div>
+
+        <div class="price-card">
+          <div>
+            <h3>Outside Detail / Commercial</h3>
+            <div class="price">\$1,500</div>
+            <p class="description">Comprehensive commercial fleet treatment, deep glass polishing, heavy fallout removal, and ceramic topcoat.</p>
+          </div>
+          <a href="#booking" class="btn-select">Book Service</a>
+        </div>
+
+        <div class="price-card">
+          <div>
+            <h3>Paint Correction</h3>
+            <div class="price">\$2,000</div>
+            <p class="description">Multi-stage machine paint correction, swirl & scratch removal, clear coat leveling, and premium ceramic coating.</p>
+          </div>
+          <a href="#booking" class="btn-select">Book Service</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking-container">
+      <h2 class="section-heading">Request Your Appointment</h2>
+
+      <div class="booking-grid">
+        <div class="booking-info">
+          <p>Reserve your preferred service time and our team will confirm your appointment as soon as possible.</p>
+          <ul>
+            <li>Custom Paint Jobs & Wraps</li>
+            <li>Rust Removal & Body Work</li>
+            <li>Multi-Stage Paint Correction</li>
+            <li>Luxury Interior & Exterior Detailing</li>
+          </ul>
+        </div>
+
+        <form id="booking-form" class="booking-form">
+          <div class="booking-form-row two-col">
+            <label>
+              First Name
+              <input type="text" id="first-name" name="first-name" placeholder="First name" required />
+            </label>
+            <label>
+              Last Name
+              <input type="text" id="last-name" name="last-name" placeholder="Last name" required />
+            </label>
+          </div>
+
+          <div class="booking-form-row two-col">
+            <label>
+              Phone Number
+              <input type="tel" id="phone" name="phone" placeholder="(555) 123-4567" required />
+            </label>
+            <label>
+              Vehicle
+              <input type="text" id="vehicle" name="vehicle" placeholder="Make / Model / Year" required />
+            </label>
+          </div>
+
+          <div class="booking-form-row">
+            <label>Services Needed</label>
+            <div class="checkbox-group">
+              <label class="check-item"><input type="checkbox" name="service" value="Custom Paint Job" /> Custom Paint Job</label>
+              <label class="check-item"><input type="checkbox" name="service" value="Vehicle Wrap" /> Vehicle Wrap</label>
+              <label class="check-item"><input type="checkbox" name="service" value="Rust Removal" /> Rust Removal</label>
+              <label class="check-item"><input type="checkbox" name="service" value="Paint Correction" /> Paint Correction</label>
+              <label class="check-item"><input type="checkbox" name="service" value="Full Detail" /> Full Detail</label>
+              <label class="check-item"><input type="checkbox" name="service" value="Other" /> Other</label>
+            </div>
+          </div>
+
+          <div class="booking-form-row two-col">
+            <label>
+              Preferred Date
+              <input type="date" id="date" name="date" required />
+            </label>
+            <label>
+              Preferred Time
+              <input type="time" id="time" name="time" required />
+            </label>
+          </div>
+
+          <div class="booking-form-row">
+            <label>
+              Project Details / Notes
+              <textarea id="details" name="details" rows="4" placeholder="Tell us about the vehicle, damage, color, finish, or anything else you want us to know."></textarea>
+            </label>
+          </div>
+
+          <button type="submit" class="btn-select booking-btn">Submit Booking Request</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer / Contact -->
+  <footer id="contact">
+    <p>Contact C&R Automotive Dealing for premium paint, wrap, detail, and rust repair services[cite: 6].</p>
+    <div class="footer-contacts">
+      <a href="mailto:contact@crdetailing.com">contact@crdetailing.com</a>
+      <a href="tel:+15554928104">(555) 492-8104</a>
+    </div>
+    <div class="contact-badge">Mon - Sat: 8:00 AM - 6:00 PM</div>
+    <p class="copyright">&copy; 2026 C&R Automotive Dealing. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
