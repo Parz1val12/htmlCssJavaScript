@@ -1,4 +1,52 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.querySelector('.site-nav');
+  const navToggle = document.querySelector('.nav-toggle');
+
+  if (nav && navToggle) {
+    const closeNav = () => {
+      nav.classList.remove('is-open');
+      navToggle.classList.remove('is-open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    };
+
+    navToggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('is-open');
+      navToggle.classList.toggle('is-open', isOpen);
+      navToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    nav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 820) {
+          closeNav();
+        }
+      });
+    });
+
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 820) {
+        closeNav();
+      }
+    });
+  }
+
+  const reviewsCarousel = document.getElementById('reviewsCarousel');
+  if (reviewsCarousel) {
+    const slides = Array.from(reviewsCarousel.children);
+    let currentReviewIndex = 0;
+
+    reviewsCarousel.classList.add('review-track');
+
+    slides.forEach((slide) => {
+      slide.classList.add('review-slide-item');
+    });
+
+    setInterval(() => {
+      currentReviewIndex = (currentReviewIndex + 1) % slides.length;
+      reviewsCarousel.style.transform = `translateX(-${currentReviewIndex * 100}%)`;
+    }, 3500);
+  }
+
   // 1. Interactive Comparison Sliders
   document.querySelectorAll('.comparison-slider').forEach((slider) => {
     const beforeLayer = slider.querySelector('.before-layer');
